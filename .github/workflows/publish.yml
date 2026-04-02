@@ -24,7 +24,7 @@ jobs:
         run: mkdir -p dist
 
       - name: Clone Reveal
-        run: git clone https://github.com/hakimel/reveal.js.git 'reveal.js'
+        run: git clone https://github.com/hakimel/reveal.js.git --branch 5.2.1 'reveal.js'
 
       - name: Copy Reveal To Dist
         run: cp -r reveal.js dist/
