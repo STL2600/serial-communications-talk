@@ -1,18 +1,8 @@
-% Talk Title
-% Your Name <your@email>
+% Serial Communication Formats
+% Joe <kamikazejoe@gmail.com> & Rob <robert@rtward.com>
 %![](static/qrcode.png)<br/>Talk: [${TALK_URL}](${TALK_URL})<br/>Repo: [${REPO_URL}](${REPO_URL})
 
-# Important Header
-
-## First Page
-
-- My
-- Talk
-- Outline
-
-## Content Page
-
-Some important info
+# Serial Communication Formats
 
 ::: notes
 
@@ -20,19 +10,27 @@ Some speaker notes here
 
 :::
 
-# Next Big Section
+# UART
 
-## Content Page 2
+# RS-232 et al.
 
-An important image
+# SPI
 
-![](https://placecats.com/200/300)
+# CAN
 
-# The End
+# I2C
+
+# 1-Wire
+
+# Demos
+
+# Bob
+
+# Joe
 
 ---
 
-Your Name <your@email>
+% Joe <kamikazejoe@gmail.com> & Rob <robert@rtward.com>
 
 ![](static/qrcode.png)
 
