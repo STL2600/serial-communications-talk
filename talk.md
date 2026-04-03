@@ -55,6 +55,12 @@ Some speaker notes here
  - Set Ready
  - Ground
 
+## Signalling
+
+ - Pin driven high for 1
+ - Pin driven low for 0
+ - 3-15v diff
+
 ## RS-422
 
  - Often used as an extender
@@ -82,7 +88,7 @@ Some speaker notes here
 
 :::
 
-## 422 / 485
+## 422 / 485 Pinout
 
 ```
   Device A                              Device B
@@ -98,15 +104,87 @@ Some speaker notes here
             ~~~~~~~~~~~~~~~~~~~~~
 ```
 
+## 422 / 485 Signaling
+
+ - Wires are driven apart
+ - +/- 200mv min
+ - +/- 6v max
+
 # UART
+
+# I2C
+
+# 1-Wire
+
+ - Half Duplex Only
+ - Each chip is uique
+ - Multi device
+ - Two wires (data & ground)
+ 
+## Uses
+
+ - iButtons
+ - Magsafe 
+ - Power supplies
+ 
+## Signaling
+
+ - Wire is normally high (3-5v)
+ - Signals work by pulling low
+ - Short low = 1
+ - Long low = 0
 
 # SPI
 
 # CAN
 
-# I2C
+ - Mostly used for cars
+ - Similar to RS-422 / 485
+ 
+# High-Speed Bus
 
-# 1-Wire
+![](static/canbus-high-speed.png)
+
+::: notes
+
+ - Each end has 120ohm resistor
+
+:::
+
+# Signaling
+
+ - Signal 1 by driving high and low
+ - Signal 0 by allowing them to equalize
+
+# Low-Speed Bus
+
+![](static/canbus-low-speed.png)
+
+::: notes
+
+ - Total resistence should be 100ohm
+ - More fault tolerant
+
+:::
+
+# Signaling
+
+ - Signal 1 by driving high and low
+ - Signal 0 by inverting 1
+
+# Protocol
+
+ - Wait after message
+ - Message start by driving high
+ - Start with message ID
+ 
+# Packet Format
+
+![](static/canbus-frame.png)
+
+# Priority
+
+![](static/canbus-priority.png)
 
 # Demos
 
