@@ -410,11 +410,42 @@ Inter Integrated Circuit
 
 :::
 
-# Demos
+## Interfacing
 
-# Bob
+![](static/esp32-pinout.png)
 
-# Joe
+::: notes
+
+- If you have a datasheet, you can simply look up the pinout.
+- This is where a Bus Pirate or Flipper can come in handy.
+- You already know what to connect to.
+
+:::
+
+## Interfacing
+
+![](static/random-board.png)
+
+::: notes
+
+- If you have a datasheet, you can simply look up the pinout.
+- You have to do some investigating.
+- You start with a multimeter
+- Start testing voltages between the unmarked points and your common ground
+- Anything thats around 3 or 5 volts could be a signal
+- Then break out your logic analyzer...
+
+:::
+
+# Demo
+
+Using A Logic Analyzer To ID Signals
+
+::: notes
+
+
+
+:::
 
 ---
 
