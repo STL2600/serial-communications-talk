@@ -27,7 +27,7 @@ Some speaker notes here
             |
 ----------------------------
 | Data Circuit-Terminating |
-| Equipment (DCE)         |
+| Equipment (DCE)          |
 ----------------------------
 ```
 
@@ -81,6 +81,22 @@ Some speaker notes here
  - Also used to extend 232 connections
 
 :::
+
+## 422 / 485
+
+```
+  Device A                              Device B
+  --------                              --------
+            ~~~~~~~~~~~~~~~~~~~~~
+   TX+ ----~  Twisted Pair 1    ~---- RX+
+   TX- ----~                    ~---- RX-
+            ~~~~~~~~~~~~~~~~~~~~~
+
+            ~~~~~~~~~~~~~~~~~~~~~
+   RX+ ----~  Twisted Pair 2    ~---- TX+
+   RX- ----~                    ~---- TX-
+            ~~~~~~~~~~~~~~~~~~~~~
+```
 
 # UART
 
