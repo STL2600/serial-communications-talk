@@ -236,8 +236,8 @@ Serial Peripheral Interface
                         |   |  |  |   +-------------------+                      
                         |   |  |  |   |                   |                      
                         |   |  |  +-> |  SCLK             |                      
-                        |   |  +----> |  MOSI   Device 3  |                      
-                        |   --------- |  MISO             |                      
+                        |     | +----> | MOSI   Device 3 |
+                        | --- |MISO             |                      
                         +-----------> |  CS               |                      
                                       |                   |                      
                                       +-------------------+                      
@@ -328,8 +328,8 @@ Inter Integrated Circuit
                         >   >  Pull-up Resistors
                         <   <                                                                      
                         |   |                                                                            
----+---------------+----+---|----+-------------+---------  SDA                                           
----|--+------------|--+-----+----|--+----------|--+------  SCL                                           
+| ---+---------------+----+--- | ----+-------------+---------  SDA |
+| ---------------------------- | --------------------------------- |+------------|--+-----+----|--+----------|--+------  SCL                                           
    |  |            |  |          |  |          |  |                                                      
 +------------+   +----------+  +----------+  +----------+                                                
 |            |   |          |  |          |  |          |                                                
@@ -353,7 +353,7 @@ Inter Integrated Circuit
  - Mostly used for cars
  - Similar to RS-422 / 485
  
-# High-Speed Bus
+## High-Speed Bus
 
 ![](static/canbus-high-speed.png)
 
@@ -363,12 +363,12 @@ Inter Integrated Circuit
 
 :::
 
-# Signaling
+## Signaling
 
  - Signal 1 by driving high and low
  - Signal 0 by allowing them to equalize
 
-# Low-Speed Bus
+## Low-Speed Bus
 
 ![](static/canbus-low-speed.png)
 
@@ -379,22 +379,22 @@ Inter Integrated Circuit
 
 :::
 
-# Signaling
+## Signaling
 
  - Signal 1 by driving high and low
  - Signal 0 by inverting 1
 
-# Protocol
+## Protocol
 
  - Wait after message
  - Message start by driving high
  - Start with message ID
  
-# Packet Format
+## Packet Format
 
 ![](static/canbus-frame.png)
 
-# Priority
+## Priority
 
 ![](static/canbus-priority.png)
 
