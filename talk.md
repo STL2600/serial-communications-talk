@@ -443,7 +443,14 @@ Using A Logic Analyzer To ID Signals
 
 ::: notes
 
-
+- Explain ESP32 device.
+- Logic Analyzer we are using
+- (You can also make one from a Pico)
+- Wiring things up
+- Sample Rates / Sample Size
+  - Bandwidth and RAM constraints
+- Record a sample
+- Configure Decoders
 
 :::
 
