@@ -170,7 +170,7 @@ RX <------------ TX
 
 :::
 
-# I2C
+# SPI
 
 # 1-Wire
 
@@ -192,7 +192,16 @@ RX <------------ TX
  - Short low = 1
  - Long low = 0
 
-# SPI
+# I2C
+
+Inter Integrated Circuit
+
+::: notes
+
+- I2C or I^2C
+
+
+:::
 
 # CAN
 
