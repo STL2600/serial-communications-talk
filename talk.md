@@ -398,6 +398,18 @@ Inter Integrated Circuit
 
 ![](static/canbus-priority.png)
 
+# Interfacing
+
+- Raspberry Pi or other SBCs
+- Microcontrollers
+- Flipper Zero
+- Bus Pirate
+- Logic Analyzer
+
+::: notes
+
+:::
+
 # Demos
 
 # Bob
