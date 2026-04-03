@@ -2,13 +2,7 @@
 % Joe <kamikazejoe@gmail.com> & Rob <robert@rtward.com>
 %![](static/qrcode.png)<br/>Talk: [${TALK_URL}](${TALK_URL})<br/>Repo: [${REPO_URL}](${REPO_URL})
 
-# Serial Communication Formats
-
-::: notes
-
-Some speaker notes here
-
-:::
+# Serial Comm Formats
 
 # RS-232 et al.
 
@@ -456,7 +450,7 @@ Using A Logic Analyzer To ID Signals
 
 ---
 
-% Joe <kamikazejoe@gmail.com> & Rob <robert@rtward.com>
+Joe <kamikazejoe@gmail.com> & Rob <robert@rtward.com>
 
 ![](static/qrcode.png)
 
