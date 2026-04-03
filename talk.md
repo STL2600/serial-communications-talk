@@ -175,7 +175,7 @@ RX <------------ TX
 # 1-Wire
 
  - Half Duplex Only
- - Each chip is uique
+ - Each chip is uialt textque
  - Multi device
  - Two wires (data & ground)
  
@@ -199,7 +199,67 @@ Inter Integrated Circuit
 ::: notes
 
 - I2C or I^2C
+- Little bit UART, little bit SPI
+- Slower than SPI, but easier to add components
 
+:::
+
+## Uses
+
+- Sensors
+- Small OLED Displays
+- DACs and ADCs
+- EEPROMs
+
+::: notes
+
+- Lots of sensors, including what's in your PCs
+- Drives small OLEDs
+- Extended Display Identification Data (EDID)
+  - Identify monitor specs for VGA, DVI, and HDMI
+  - Can hack a VGA port into an I2C port
+
+:::
+
+## Signaling
+
+![](static/i2c-frame.png)
+
+::: notes
+
+- Typical voltages +3.3V to +5V
+- Each devices has a 7-bit hardware address
+- This allows for 127 devices connected by just two wires.
+- Standar speed is around 100 kbps, but there are specs for up to 5 Mbps
+
+:::
+
+## Wiring
+
+```                                                                                                     
+---------------------------------------------------------- Vdd                                           
+                        |   |                                                                                 
+                        <   <                                                                           
+                        >   >  Pull-up Resistors
+                        <   <                                                                      
+                        |   |                                                                            
+---+---------------+----+---|----+-------------+---------  SDA                                           
+---|--+------------|--+-----+----|--+----------|--+------  SCL                                           
+   |  |            |  |          |  |          |  |                                                      
++------------+   +----------+  +----------+  +----------+                                                
+|            |   |          |  |          |  |          |                                                
+|     uC     |   |   ADC    |  |   DAC    |  |   uC     |                                                
+| Controller |   | Target 1 |  | Target 2 |  | Target 3 |                                                
+|            |   |          |  |          |  |          |                                                
++------------+   +----------+  +----------+  +----------+                                                                                                                                                    
+```
+
+::: notes
+
+- Only 2 wires connecting all devices
+  - Serial Data Line (SDA)
+  - Serial Clock Line (SCL)
+  - They also need pull-up resistors to the voltage line
 
 :::
 
