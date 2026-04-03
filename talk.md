@@ -112,6 +112,64 @@ Some speaker notes here
 
 # UART
 
+Universal Asynchronous Receiver-Transmitter
+
+::: notes
+
+- One of the oldest and simplest methods for devices to communicate
+- No shared clock. Which is why it's "Asynchronous"
+- Instead, there is an agreed upon baud rate.
+- Is slow, anywhere between 300 to 115200 bps (though usually 9600 or above)
+
+:::
+
+## Uses
+
+- Microcontrollers
+- Rasberry Pis
+- Bluetooth Modules
+- GPS Modules
+
+::: notes
+
+- Not just Respberry Pis
+- Pretty much any System-on-Chip
+- How you get console access
+- Goes over the aformentioned RS standards
+
+:::
+
+## Signaling
+
+![](static/async-frame.png)
+
+::: notes
+
+- Devices must agree upon:
+- Voltages
+- Baud Rate
+- Parity bits
+- Data bit size
+- Stop bit size
+- Flow control
+
+:::
+
+## Wiring
+
+```
+TX ------------> RX
+RX <------------ TX
+```
+
+::: notes
+
+- Wiring is dead simple
+- Which is why it's so widely used
+- Could scale down even more with HDUART
+
+:::
+
 # I2C
 
 # 1-Wire
