@@ -172,6 +172,91 @@ RX <------------ TX
 
 # SPI
 
+Serial Peripheral Interface
+
+::: notes
+
+- Opposite  of UART
+  - Much faster.
+    - Speed is determined by it's Clock rate.
+    - There's no specified maximum.
+    - Limited by hardware
+- Designed to allow multipled devices to connect to the same controller
+
+:::
+
+## Uses
+
+- SD Cards
+- Flash Memory
+- Small LCD Displays
+
+::: notes
+
+- SD Cards have built in SPI interface for slower access
+- Flash Memory, DACs, ADCs, LCD Displays
+- All kinds of components
+
+:::
+
+## Signaling
+
+![](static/spi-frame.png)
+
+::: notes
+
+- Has dedicated lines for input and output
+- Allows for full-duplex transmission
+- Data frames are either 8 or 16 bit in size
+- Data is ordered by eitehr MSB or LSB
+- So data pretty much just shifts back and forth at clock speed
+
+:::
+
+## Wiring
+```
++----------------+                    +-------------------+                      
+|                |                    |                   |                      
+|            SCLK|----------------+-> |  SCLK             |                      
+|            MOSI|-------------+----> |  MOSI   Device 1  |                      
+|   MAIN     MISO|<---------+-------- |  MISO             |                      
+|            CS1 |------------------> |  CS               |                      
+|            CS2 |--------+ |  |  |   |                   |                      
+|            CS3 |------+ | |  |  |   +-------------------+                      
+|                |      | | |  |  |                                              
++----------------+      | | |  |  |   +-------------------+                      
+                        | | |  |  |   |                   |                      
+                        | | |  |  +-> |  SCLK             |                      
+                        | | |  +----> |  MOSI   Device 2  |                      
+                        | | +-------- |  MISO             |                      
+                        | +---------> |  CS               |                      
+                        |   |  |  |   |                   |                      
+                        |   |  |  |   +-------------------+                      
+                        |   |  |  |                                              
+                        |   |  |  |   +-------------------+                      
+                        |   |  |  |   |                   |                      
+                        |   |  |  +-> |  SCLK             |                      
+                        |   |  +----> |  MOSI   Device 3  |                      
+                        |   --------- |  MISO             |                      
+                        +-----------> |  CS               |                      
+                                      |                   |                      
+                                      +-------------------+                      
+                                                                               
+```
+
+::: notes
+
+- To wire up one device, you need a minimum of 4 wires
+  - Main Out / Secondary In (MOSI)
+  - Main In / Secondary Out (MISO)
+  - Serial Clock (SCLK)
+  - Secondary or Cable Select (SS/CS)
+- For each additional device you need a dedicated CS line
+- Wiring get complicated with many devices
+- Limited by IO on the main controller
+
+:::
+
 # 1-Wire
 
  - Half Duplex Only
