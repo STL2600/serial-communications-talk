@@ -1,4 +1,4 @@
-% Serial Communication Formats
+% Serial Comm Formats
 % Joe <kamikazejoe@gmail.com> & Rob <robert@rtward.com>
 %![](static/qrcode.png)<br/>Talk: [${TALK_URL}](${TALK_URL})<br/>Repo: [${REPO_URL}](${REPO_URL})
 
